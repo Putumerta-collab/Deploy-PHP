@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: php-app
+  labels:
+    app: php-app
+spec:
+  replicas: 1  # Jumlah pod yang ingin kamu jalankan
+  selector:
+    matchLabels:
+      app: php-app
+  template:
+    metadata:
+      labels:
+        app: php-app
+    spec:
+      containers:
+      - name: php-app
+        image: dpuja/deployphp:latest  # Ganti dengan nama image kamu
+        ports:
+        - containerPort: 80  # Port yang diekspos di container
+        env:  # Jika ada variabel lingkungan yang dibutuhkan
+        - name: DB_HOST
+          value: "mysql-service"  # Ganti dengan nama service MySQL
+        - name: DB_USER
+          value: "your_user"  # Ganti dengan username MySQL kamu
+        - name: DB_PASSWORD
+          value: "your_password"  # Ganti dengan password MySQL kamu
+        - name: DB_NAME
+          value: "your_database"  # Ganti dengan nama database kamu
