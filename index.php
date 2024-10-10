@@ -23,7 +23,7 @@ $relay4 = $data['relay4'];
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Smart Temple</title>
+    <title>System Smart Temple</title>
 
     <script type="text/javascript">
         //Relay1
@@ -122,7 +122,7 @@ $relay4 = $data['relay4'];
 <body>
     <!-- Judul -->
     <div class="container" style="text-align:center; padding-top:20px">
-    <img src="img/logo.png" alt="Logo Header">
+    <img src="img/header.jpg" alt="Logo Header">
 
     </div>
 
@@ -249,7 +249,7 @@ $relay4 = $data['relay4'];
 
         <!--tampilan image-->
         <div class="container" style="text-align:center; padding-top:20px">
-            <img src="img/logo footer.JPG">
+            <img src="img/footer.jpg">
         </div>
         <!-- akhir tampilan image-->
 
