@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: php-service
 spec:
-  type: LoadBalancer  # Menggunakan LoadBalancer untuk akses eksternal
-  ports:
-    - port: 80  # Port yang akan digunakan untuk akses
-      targetPort: 80  # Port yang diekspos di container
   selector:
-    app: php-app  # Harus cocok dengan label pada deployment
+    app: php-app
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 80
+  type: LoadBalancer

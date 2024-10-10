@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: php-app
-        image: dpuja/deployphp:latest  # Ganti dengan nama image kamu
+        image: pmerta22/deploy-php:latest  # Ganti dengan nama image kamu
         ports:
         - containerPort: 80  # Port yang diekspos di container
         env:  # Jika ada variabel lingkungan yang dibutuhkan

@@ -122,7 +122,7 @@ $relay4 = $data['relay4'];
 <body>
     <!-- Judul -->
     <div class="container" style="text-align:center; padding-top:20px">
-        <img src="img/logo header.JPG">
+        <img src="img/logo\ header.jpg">
     </div>
 
     <style>
