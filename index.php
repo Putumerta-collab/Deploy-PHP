@@ -23,7 +23,7 @@ $relay4 = $data['relay4'];
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <title>Smart Temple</title>
+    <title>Testing PHP Smart Temple</title>
 
     <script type="text/javascript">
         //Relay1
@@ -122,7 +122,7 @@ $relay4 = $data['relay4'];
 <body>
     <!-- Judul -->
     <div class="container" style="text-align:center; padding-top:20px">
-    <img src="img/logo%20header.jpg" alt="Logo Header">
+    <img src="img/logo.png" alt="Logo Header">
 
     </div>
 
@@ -134,7 +134,7 @@ $relay4 = $data['relay4'];
     </style>
 
 <div class="container text-center py-4">
-    <h2 class="judul">PROTOTYPE SMART TEMPLE BERBASIS IOT DENGAN NODE  <br> MCU UNTUK MENGONTROL LAMPU DAN PENGERAS SUARA PADA PURA DESA <br> STUDI KASUS PURA DESA DESA ADAT PENGULON</h2>
+    <h2 class="judul">PROTOTYPE SMART TEMPLE BERBASIS IOT DENGAN ESP  <br> 32 UNTUK MENGONTROL LAMPU DAN PENGERAS SUARA PADA PURA DESA <br> STUDI KASUS PURA DESA DESA ADAT PENGULON</h2>
 </div>
 
 
