@@ -8,8 +8,4 @@ if (!$konek) {
 }
 echo "Koneksi berhasil";
 
-// Tambahkan logika aplikasi kamu di sini
-
-// Tutup koneksi
-mysqli_close($konek);
 ?>
