@@ -1,6 +1,6 @@
 <?php
 // Buat koneksi ke database
-$konek = mysqli_connect("mysql-service", "your_user", "your_password", "your_database");
+$konek = mysqli_connect("mysql-service", "Admin", "1234", "Smart_temple");
 
 // Cek koneksi
 if (!$konek) {
