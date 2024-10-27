@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     environment {
-        registry = "dpuja/deployphp"
-        registryCredential = 'PUJAREPO'
+        registry = "pmerta22/deploy-php"
+        registryCredential = 'credensial-dockerhub'
         kubeConfig = credentials('kubeconfig-credentials-id')
     }
 
@@ -28,15 +28,6 @@ pipeline {
                     docker.withRegistry('https://index.docker.io/v1/', registryCredential) {
                         dockerImage.push()
                     }
-                }
-            }
-        }
-
-        stage('Deploy MySQL to Kubernetes') {
-            steps {
-                script {
-                    sh 'kubectl apply -f mysql-deployment.yaml'
-                    sh 'kubectl apply -f mysql-service.yaml'
                 }
             }
         }
