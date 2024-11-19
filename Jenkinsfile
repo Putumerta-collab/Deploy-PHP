@@ -35,12 +35,11 @@ pipeline {
 
         stage('Deploy PHP App to Kubernetes') {
             steps {
-                script {
-                    sh """
-                    echo "$kubeConfig" > ~/.kube/config
-                    kubectl apply -f php-deployment.yaml
-                    kubectl apply -f php-service.yaml
-                    """
+                withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
+                    sh '''
+                    kubectl --kubeconfig=$KUBECONFIG delete -f php-deployment.yaml
+                    kubectl --kubeconfig=$KUBECONFIG apply -f php-service.yaml
+                    '''
                 }
             }
         }
