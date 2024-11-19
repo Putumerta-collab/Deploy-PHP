@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         registry = "pmerta22/deploy-php"
-        registryCredential = 'credensial-dockerhub'
-        kubeConfig = credentials('kubeconfig-credentials-id')
+        registryCredential = 'dockerhub'
+        kubeConfig = credentials('kubeconfig')
     }
 
     stages {
@@ -17,7 +17,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    dockerImage = docker.build registry + ":$BUILD_NUMBER"
+                    dockerImage = docker.build("${registry}:latest")
                 }
             }
         }
@@ -26,7 +26,8 @@ pipeline {
             steps {
                 script {
                     docker.withRegistry('https://index.docker.io/v1/', registryCredential) {
-                        dockerImage.push()
+                        dockerImage.push("latest")
+                        
                     }
                 }
             }
