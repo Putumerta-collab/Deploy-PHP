@@ -37,7 +37,7 @@ pipeline {
             steps {
                 withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
                     sh '''
-                    kubectl --kubeconfig=$KUBECONFIG delete -f php-deployment.yaml
+                    kubectl --kubeconfig=$KUBECONFIG apply -f php-deployment.yaml
                     kubectl --kubeconfig=$KUBECONFIG apply -f php-service.yaml
                     '''
                 }
